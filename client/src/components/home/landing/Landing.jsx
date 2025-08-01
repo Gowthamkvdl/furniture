@@ -80,7 +80,7 @@ const Landing = () => {
             </div>
 
             <div className="col-12 p-2 pt-md-0">
-              <div className="rounded-4 box-shadow p-4 text-white" style={{ backgroundColor: "#ffb100" }}>
+              <div className="rounded-4 d-none d-md-block box-shadow p-4 text-white" style={{ backgroundColor: "#ffb100" }}>
                 <span className="badge bg-warning text-dark fw-semibold mb-3">Exclusive Offer 50% Off</span>
                 <div className="d-flex align-items-center justify-content-between">
                   <div>
