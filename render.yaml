@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: touristbus
+    name: furniture
     env: static
     staticPublishPath: dist  
     routes:
