@@ -53,7 +53,7 @@ const Navbar = () => {
                   to="/home#categories"
                   className="nav-link d-flex flex-column align-items-center"
                   scroll={(el) => {
-                    const yOffset = -50; // change this offset value as needed
+                    const yOffset = -60; // change this offset value as needed
                     const y =
                       el.getBoundingClientRect().top +
                       window.pageYOffset +
@@ -81,7 +81,7 @@ const Navbar = () => {
                   to="/home#contact"
                   className="nav-link d-flex flex-column align-items-center"
                   scroll={(el) => {
-                    const yOffset = -50; // change this offset value as needed
+                    const yOffset = -60; // change this offset value as needed
                     const y =
                       el.getBoundingClientRect().top +
                       window.pageYOffset +

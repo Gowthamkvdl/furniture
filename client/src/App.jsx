@@ -11,6 +11,7 @@ import Seller from "./routes/seller/Seller";
 import Add from "./routes/add/Add";
 import Edit from "./routes/edit/Edit";
 import ProductPage from "./routes/productPage/ProductPage";
+import AdminPanel from "./routes/adminPanel/AdminPanel";
 
 function App() {
   const router = createBrowserRouter([
@@ -19,7 +20,7 @@ function App() {
       element: <Layout />,
       children: [
         {
-          path: "/home",
+          path: "/",
           element: <Home />,
         },
         {
@@ -53,6 +54,10 @@ function App() {
         {
           path: "/product",
           element: <ProductPage />,
+        },
+        {
+          path: "/admin",
+          element: <AdminPanel />,
         },
       ],
     },
