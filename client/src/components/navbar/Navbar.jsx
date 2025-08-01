@@ -53,7 +53,7 @@ const Navbar = () => {
                   to="#categories"
                   className="nav-link d-flex flex-column align-items-center"
                   scroll={(el) => {
-                    const yOffset = -80; // change this offset value as needed
+                    const yOffset = -50; // change this offset value as needed
                     const y =
                       el.getBoundingClientRect().top +
                       window.pageYOffset +
@@ -66,10 +66,11 @@ const Navbar = () => {
                     width="20"
                     height="20"
                     fill="currentColor"
-                    className="bi bi-search d-md-none mt-1 title-text"
+                    class="bi bi-tags d-md-none mt-1 title-text"
                     viewBox="0 0 16 16"
                   >
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    <path d="M3 2v4.586l7 7L14.586 9l-7-7zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586z" />
+                    <path d="M5.5 5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1z" />
                   </svg>
                   <span className="nav-text">Categories</span>
                 </HashLink>
@@ -80,7 +81,7 @@ const Navbar = () => {
                   to="#contact"
                   className="nav-link d-flex flex-column align-items-center"
                   scroll={(el) => {
-                    const yOffset = -80; // change this offset value as needed
+                    const yOffset = -50; // change this offset value as needed
                     const y =
                       el.getBoundingClientRect().top +
                       window.pageYOffset +
@@ -93,10 +94,10 @@ const Navbar = () => {
                     width="20"
                     height="20"
                     fill="currentColor"
-                    className="bi bi-heart d-md-none mt-1 title-text"
+                    class="bi bi-telephone d-md-none mt-1 title-text"
                     viewBox="0 0 16 16"
                   >
-                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
                   </svg>
                   <span className="nav-text">Contact </span>
                 </HashLink>
@@ -113,11 +114,13 @@ const Navbar = () => {
                     width="20"
                     height="20"
                     fill="currentColor"
-                    className="bi bi-plus-circle d-md-none mt-1 title-text"
+                    class="bi bi-bag-heart  d-md-none mt-1 title-text"
                     viewBox="0 0 16 16"
                   >
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1M8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"
+                    />
                   </svg>
                   <span className="nav-text">Shop</span>
                 </Link>
