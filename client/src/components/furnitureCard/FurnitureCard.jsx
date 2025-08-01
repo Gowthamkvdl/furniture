@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaHeart, FaStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const FurnitureCard = ({ price, image, title, rating, reviews }) => {
   return (
@@ -26,17 +27,8 @@ const FurnitureCard = ({ price, image, title, rating, reviews }) => {
           ))}
           <small className="text-muted ms-1">({reviews})</small>
         </div>
-
-        <button
-          className="btn btn-dark rounded-pill px-4 py-2 fw-semibold"
-          style={{
-            background: "#2d2d2d",
-            border: "none",
-            transition: "0.3s ease",
-          }}
-        >
-          Buy Now
-        </button>
+        <Link to={'/product'} className="btn btn-dark rounded-pill px-4 py-2 fw-semibold" >Buy Now</Link>
+        
       </div>
     </div>
   );

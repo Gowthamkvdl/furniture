@@ -4,7 +4,7 @@ const Login = () => {
   const [activeTab, setActiveTab] = useState("customer");
 
   return (
-    <div className="container py-5 height-100" style={{ maxWidth: "400px" }}>
+    <div className="container py-3 height-100" style={{ maxWidth: "400px" }}>
       <h2 className="mb-4 fw-bold text-center fs-1">LOGIN</h2>
       <div className="bg-light py-5 px-3 shadow rounded-4">
         <div className="d-flex justify-content-around mb-4">
@@ -73,9 +73,9 @@ const Login = () => {
             </button>
           </form>
         )}
-      <a href="/register" className="float-end mt-2">
-        Don't have an account?
-      </a>
+        <a href="/register" className="float-end mt-2">
+          Don't have an account?
+        </a>
       </div>
     </div>
   );
