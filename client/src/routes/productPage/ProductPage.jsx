@@ -33,9 +33,10 @@ const ProductPage = () => {
       <div className="row mb-4">
         <div className="col-md-6 d-flex justify-content-center">
           <img
-            src={f2} 
+            src={f3} 
             alt={product.name}
-            className="img-fluid "
+            style={{ width: "50%" }}
+            className="img-fluid mb-4"
           />
         </div>
         <div className="col-md-6">

@@ -15,7 +15,7 @@ const FurnitureCard = ({ price, image, title, rating, reviews }) => {
           src={image}
           alt={title}
           className="img-fluid rounded"
-          style={{ width: "90%" }}
+          style={{ width: "40%" }}
         />
       </div>
 
