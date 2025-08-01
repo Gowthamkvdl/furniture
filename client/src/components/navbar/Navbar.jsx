@@ -3,6 +3,7 @@ import "./navbar.css";
 import { Toaster, toast } from "react-hot-toast";
 import { useLocation, Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import ScrollToTop from "../scrollToTop/ScrollToTop";
 
 const Navbar = () => {
   const location = useLocation();
@@ -10,6 +11,8 @@ const Navbar = () => {
 
   return (
     <div className="d-flex justify-content-center">
+        <ScrollToTop />
+
       <nav className="navbar responsive-bg text-white box-shadow mt-md-2 rounded-4 container navbar-expand d-flex align-items-center  justify-content-md-between justify-content-around ">
         <div className="touristBus d-none d-md-block sidePart">
           <h1 className="title-text m-4 ">Macx Furniture</h1>
