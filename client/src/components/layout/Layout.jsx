@@ -9,7 +9,7 @@ export const Layout = () => {
     <div>
       <div className="container">
         <Toaster position="top-center" reverseOrder={false} />
-
+        <div className="mt-md-5"></div>
         <Navbar />
 
         <div className="mt-md-5 mb-md-5"></div>

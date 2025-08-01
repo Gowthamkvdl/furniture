@@ -6,6 +6,6 @@ const Footer = () => {
       <p>© {new Date().getFullYear()} YourCompany. All rights reserved.</p>
     </div>
   );
-};
+}; 
 
 export default Footer;

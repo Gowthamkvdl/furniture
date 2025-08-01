@@ -11,16 +11,17 @@
   --primary-800: #004f93;
   --primary-900: #003570;
 
-  /* Secondary: Warm Orange */
-  --secondary-100: #fff7e0;
-  --secondary-200: #ffe3b3;
-  --secondary-300: #ffcc80;
-  --secondary-400: #ffb34d;
-  --secondary-500: #ff9800; /* Main Orange */
-  --secondary-600: #db7800;
-  --secondary-700: #b75900;
-  --secondary-800: #933d00;
-  --secondary-900: #702600;
+  /* Secondary: Olive Green */
+  --secondary-100: #f5f8e7;
+  --secondary-200: #e5ecc4;
+  --secondary-300: #d0dd9c;
+  --secondary-400: #b5c572;
+  --secondary-500: #9aad4a;  /* Main Olive Green */
+  --secondary-600: #7e9139;
+  --secondary-700: #64762c;
+  --secondary-800: #4b5a1f;
+  --secondary-900: #343f14;
+
 
   /* Neutral */
   --neutral-100: #fbfcfa;
@@ -137,22 +138,22 @@ html {
   color: white !important;
 }
 
-/* width */
+/* width
 ::-webkit-scrollbar {
   width: 5px;
   height: 10px;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0);
-}
+/* ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255);
+} */
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: var(--primary-700);
   border-radius: 20px;
-}
+} */ 
 
 .modal-header {
   border-bottom: none !important;
@@ -209,6 +210,7 @@ html {
   z-index: 9;
   position: fixed;
   top: 0;
+  left:0;
 }
 
 .box-shadow {
