@@ -23,7 +23,7 @@ const Navbar = () => {
               <li className="nav-item ">
                 <HashLink
                   smooth
-                  to="/home#landning"
+                  to="/#landning"
                   className="nav-link d-flex flex-column align-items-center"
                   scroll={(el) => {
                     const yOffset = -100; // change this offset value as needed
@@ -50,7 +50,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <HashLink
                   smooth
-                  to="/home#categories"
+                  to="/#categories"
                   className="nav-link d-flex flex-column align-items-center"
                   scroll={(el) => {
                     const yOffset = -60; // change this offset value as needed
@@ -78,7 +78,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <HashLink
                   smooth
-                  to="/home#contact"
+                  to="/#contact"
                   className="nav-link d-flex flex-column align-items-center"
                   scroll={(el) => {
                     const yOffset = -60; // change this offset value as needed
