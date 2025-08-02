@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DB_URL")
+}
+
+model Customer {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  orders    Order[]
+}
+
+model Seller {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  name       String
+  shopName   String
+  email      String   @unique
+  password   String
+  isVerified Boolean  @default(false)
+  admin      Boolean  @default(false)
+  products   Product[]
+  createdAt  DateTime @default(now())
+}
+
+model Product {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String
+  price       Float
+  image       String
+  sellerId    String   @db.ObjectId
+  seller      Seller   @relation(fields: [sellerId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  orders      Order[]
+}
+
+model Order {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  customerId String   @db.ObjectId
+  productId  String   @db.ObjectId
+  quantity   Int      @default(1)
+  status     String   @default("pending")
+  total      Float
+  createdAt  DateTime @default(now())
+
+  customer   Customer @relation(fields: [customerId], references: [id])
+  product    Product  @relation(fields: [productId], references: [id])
+}

@@ -1,13 +1,17 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./seller.css";
+import { AuthContext } from "../../context/AuthContext";
 
 const Seller = () => {
   const [showPasswordModal, setShowPasswordModal] = useState(false);
+  const {currentUser, updateUser} = useContext(AuthContext)
   const [showOrderModal, setShowOrderModal] = useState(false);
   const [selectedOrder, setSelectedOrder] = useState(null);
-  const [showRemoveModal, setShowRemoveModal] = useState(false);
+  const [showRemoveModal, setShowRemoveModal] = useState(false);  
   const [productToRemove, setProductToRemove] = useState(null);
+  const navigate = useNavigate()
+  
 
   const products = [
     { name: "Rift Gogan Sofa", stock: 12, price: 2499, status: "Active" },
@@ -39,6 +43,13 @@ const Seller = () => {
     setShowRemoveModal(true);
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("user")
+    localStorage.removeItem("token")
+
+    navigate("/login")
+  }
+  
   return (
     <div className="container py-4">
       <h4 className="mb-4">Seller Dashboard</h4>
@@ -48,13 +59,13 @@ const Seller = () => {
           <div className="card shadow-sm p-3">
             <h5>Profile Info</h5>
             <p>
-              <strong>Name:</strong> Gowtham Furniture
+              <strong>Name:</strong> {(currentUser.name).toUpperCase()}
             </p>
             <p>
-              <strong>Email:</strong> seller@example.com
+              <strong>Email:</strong> {currentUser.email}
             </p>
             <p>
-              <strong>Store:</strong> Gowtham Interiors
+              <strong>Store:</strong> {currentUser.shopName}
             </p>
           </div>
         </div>
@@ -158,7 +169,7 @@ const Seller = () => {
 
       {/* Logout */}
       <div className="text-end">
-        <button className="btn btn-outline-danger">Logout</button>
+        <button className="btn btn-outline-danger" onClick={handleLogout}>Logout</button>
       </div>
 
       {/* Password Modal */}
